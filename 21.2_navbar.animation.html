@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Animation</title>
+  <style>
+    
+    body{
+      background-color: yellow;
+      color: black;
+      font-size: 1.5rem;
+    }
+
+    .navbar{
+      margin: 40px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    li{
+      display: inline-block;
+    }
+
+    li a{
+      color: black;
+      text-decoration: none;
+      padding: 0 20px;
+    }
+    
+    .nav::before{
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      position: absolute;
+      transition: width 0.3s;
+      transform: translateX(-100%);
+    }
+
+    .nav:hover::before{
+      width: 100%;
+      transition: width 0.3s;
+    }
+    .nav::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      transition: width 0.3s;
+      transform: translateY(100%);
+    }
+
+    .nav:hover::after{
+      width: 100%;
+      transition: width 0.3s;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="#" class="nav">Home</a></li>
+      <li><a href="#" class="nav">About</a></li>
+      <li><a href="#" class="nav">Services</a></li>
+      <li><a href="#" class="nav">Portfolio</a></li>
+      <li><a href="#" class="nav">Contact</a></li>
+    </ul>
+  </div>
+</body>
+</html>

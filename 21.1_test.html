@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transitions</title>
+  <style>
+
+    Rotate{
+      background-color: yellow;
+      height: 200px;
+      width: 100px;
+      transition: all 2s ease-in-out;
+    }
+
+    .rotate:hover{
+      transform: rotate(90deg);
+    }
+
+    /*
+    Use positions for the animations+before/after. 
+    height width 100% of the a tag (parent tag). 
+    use flex for the added elements. 
+    transform method according to the buttons names - transform:translateY(-100% (minus means from the left to the right. x = left to right. y = top to bottom));
+    transition: all 0.3s;
+    overflow hidden. 
+    translateY:hover::before{
+    transform: translateY(0);
+    }
+    change font color of animation:
+    .rotate:hover{
+      color: white;
+    }
+
+      */ 
+  </style>
+</head>
+<body>
+  <button class="Rotate" href="#">Rotate</button>
+  <button class="Translate" href="#">Translate</button>
+  <button class="TranslateY" href="#">TranslateY</button>
+  <button class="Scale & Opacity" href="#">Scale & Opacity</button>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinners</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container{
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .loadingCircle{
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      border: 3px rgb(140, 255, 255) solid;
+      border-radius: 50%;
+      border-top-color: gray;
+      margin-bottom: 50px;
+      animation: spin linear 1s infinite;
+    }
+
+    @keyframes spin{
+      to{
+        transform: rotate(360deg);
+      }
+    }
+
+    .loadingDots{
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dot1{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots 1s infinite;
+    }
+    
+    .dot2{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots 1s infinite;
+      animation-delay: 0.25s;
+    }
+
+    .dot3{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots 1s infinite;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes loadingDots{
+      0%{
+        transform: initial;
+      }
+      30%{
+        transform: translateY(-15px);
+      }
+      60%{
+        transform: initial;
+      }
+    }
+
+    .loadingDots2{
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dotA{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots2 1s infinite;
+    }
+    
+    .dotB{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots2 1s infinite;
+      animation-delay: 0.25s;
+    }
+
+    .dotC{
+      height: 15px;
+      width: 15px;
+      background: rgb(140, 255, 255);
+      border-radius: 50%;
+      animation: loadingDots2 1s infinite;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes loadingDots2{
+      to{
+        background: gray;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="loadingCircle"></div>
+
+  <div class="loadingDots">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+    <div class="dot3"></div>
+  </div>
+
+  <div class="loadingDots2">
+    <div class="dotA"></div>
+    <div class="dotB"></div>
+    <div class="dotC"></div>
+  </div>
+  
+</div>
+</body>
+</html>
